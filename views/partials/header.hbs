@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a href='/' class="nav-link">Home</a></li>
+      {{#if userCustomId}}
+      <li class="nav-item"><a href='/dashboard' class="nav-link">Dashboard</a></li>
+      <li class="nav-item" style="margin-left: 1100px;">
+        <form method='POST' action='/logout?_method=DELETE'>
+          <button class='btn btn-success' type='submit'><input type='submit' value='Logout'></button>
+        </form>
+      </li>
+      {{else}}
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Sign in</a>
+      </li>
+      <li  class="nav-item">
+        <a class="nav-link" href="/register">Register</a>
+      </li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+

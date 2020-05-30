@@ -1,0 +1,29 @@
+<h3>Welcome to the Company Dashboard</h3>
+<div class='container'>
+  {{#if employees}}
+  <h1>List Of Employees</h1>
+  <table class='table table-striped table-responsive'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Joining Date</th>
+        <th>Leaving Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each employees}}
+      <tr>
+        <td>{{this.employee.name}}</td>
+        <td>{{this.employee.email}}</td>
+        <td>{{this.joiningDate}}</td>
+        <td>{{this.leavingDate}}</td>
+      </tr>
+    </tbody>
+    {{/each}}
+  </table>
+  {{else}}
+  <h3>No one has yet been employed</h3>
+  {{/if}}
+</div>
